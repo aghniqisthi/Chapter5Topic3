@@ -1,9 +1,7 @@
 package coding.withze.chapterlimakmtiga
 
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface RestfulAPI {
     @GET("admin/car")
@@ -11,4 +9,7 @@ interface RestfulAPI {
 
     @POST("admin/car")
     fun addCar(@Body request : DataCar) : Call<PostResponseCar>
+
+    @PUT("admin/car/{id}")
+    fun updateCar(@Path("id") id:Int, @Body request: DataCar) : Call<List<PutResponseCar>>
 }

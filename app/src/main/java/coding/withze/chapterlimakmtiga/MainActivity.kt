@@ -1,5 +1,6 @@
 package coding.withze.chapterlimakmtiga
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         showDataCar()
+        binding.addButton.setOnClickListener{
+            startActivity(Intent(this, AddCarActivity::class.java))
+        }
     }
 
     fun showDataCar(){
