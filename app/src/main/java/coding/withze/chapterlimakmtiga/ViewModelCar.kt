@@ -11,7 +11,7 @@ class ViewModelCar : ViewModel() {
 
     lateinit var liveDataCar : MutableLiveData<List<ResponseDataCarItem>>
     lateinit var postLDCar : MutableLiveData<PostResponseCar>
-    lateinit var putLDCar : MutableLiveData<PutResponseCar>
+    lateinit var putLDCar : MutableLiveData<List<PutResponseCar>>
 
     init {
         liveDataCar = MutableLiveData()
@@ -27,7 +27,7 @@ class ViewModelCar : ViewModel() {
         return postLDCar
     }
 
-    fun editLiveDataCar() : MutableLiveData<PutResponseCar>{
+    fun editLiveDataCar() : MutableLiveData<List<PutResponseCar>>{
         return putLDCar
     }
 
